@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/broken_white">
+
+    <!-- Header Layout -->
+
+    <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_alignParentTop="true"
+            android:background="@color/brown"
+            android:gravity="center" >
+    </RelativeLayout>
+
+    <!-- Footer Layout -->
+
+    <RelativeLayout
+            android:id="@+id/footerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/brown"
+            android:gravity="center" >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+    </RelativeLayout>
+
+    <!-- Menu Layout -->
+
+    <RelativeLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/footerLayout"
+            android:layout_below="@id/headerLayout"
+            android:gravity="center" >
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:gravity="center"
+                >
+            <ImageView android:layout_width="800px"
+                       android:layout_height="300px"
+                       android:layout_marginBottom="15px"
+                       android:src="@drawable/qurhad_judul"/>
+8
+            <ImageButton android:id="@+id/quranButton"
+                         android:layout_width="400px"
+                         android:layout_height="120px"
+                         android:scaleType="fitXY"
+                         android:layout_marginBottom="15px"
+                         android:onClick="quranButton"
+                         android:background="?android:selectableItemBackground"
+                         android:src="@drawable/button_press_quran"/>
+
+            <ImageButton android:id="@+id/hadistButton"
+                         android:layout_width="400px"
+                         android:layout_height="120px"
+                         android:scaleType="fitXY"
+                         android:layout_marginBottom="15px"
+                         android:background="?android:selectableItemBackground"
+                         android:src="@drawable/button_press_hadist"/>
+
+            <ImageButton android:id="@+id/cariButton"
+                         android:layout_width="400px"
+                         android:layout_height="120px"
+                         android:layout_marginBottom="15px"
+                         android:background="?android:selectableItemBackground"
+                         android:scaleType="fitXY"
+                         android:src="@drawable/button_press_cari"/>
+
+            <ImageButton android:id="@+id/catatanButton"
+                         android:layout_width="400px"
+                         android:layout_height="120px"
+                         android:layout_marginBottom="15px"
+                         android:background="?android:selectableItemBackground"
+                         android:scaleType="fitXY"
+                         android:src="@drawable/button_press_catatan"/>
+
+            <ImageButton android:id="@+id/bookmarkButton"
+                         android:layout_width="400px"
+                         android:layout_height="120px"
+                         android:layout_marginBottom="15px"
+                         android:background="?android:selectableItemBackground"
+                         android:scaleType="fitXY"
+                         android:src="@drawable/button_press_bookmark"/>
+
+            <ImageButton android:id="@+id/tentangkButton"
+                         android:layout_width="400px"
+                         android:layout_height="120px"
+                         android:background="?android:selectableItemBackground"
+                         android:scaleType="fitXY"
+                         android:src="@drawable/button_press_tentang"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.android.qurhad"
+          android:versionCode="1"
+          android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="15"/>
+    <application android:label="@string/app_name" android:icon="@drawable/qurhad_logo">
+
+        <activity android:name="com.android.qurhad.Splash"
+                  android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.android.qurhad.MainMenu"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <activity android:name="com.android.qurhad.QuranSurat"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <activity android:name="com.android.qurhad.HadistRiwayat"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <activity android:name="com.android.qurhad.Pencarian"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <activity android:name="com.android.qurhad.Catatan"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <activity android:name="com.android.qurhad.Bookmark"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <activity android:name="com.android.qurhad.TentangQurhad"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+
+    </application>
+</manifest>
