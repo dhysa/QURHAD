@@ -67,6 +67,7 @@
                          android:layout_height="120px"
                          android:scaleType="fitXY"
                          android:layout_marginBottom="15px"
+                         android:onClick="hadistButton"
                          android:background="?android:selectableItemBackground"
                          android:src="@drawable/button_press_hadist"/>
 
@@ -74,6 +75,7 @@
                          android:layout_width="400px"
                          android:layout_height="120px"
                          android:layout_marginBottom="15px"
+                         android:onClick="cariButton"
                          android:background="?android:selectableItemBackground"
                          android:scaleType="fitXY"
                          android:src="@drawable/button_press_cari"/>
@@ -82,6 +84,7 @@
                          android:layout_width="400px"
                          android:layout_height="120px"
                          android:layout_marginBottom="15px"
+                         android:onClick="catatanButton"
                          android:background="?android:selectableItemBackground"
                          android:scaleType="fitXY"
                          android:src="@drawable/button_press_catatan"/>
@@ -90,6 +93,7 @@
                          android:layout_width="400px"
                          android:layout_height="120px"
                          android:layout_marginBottom="15px"
+                         android:onClick="bookmarkButton"
                          android:background="?android:selectableItemBackground"
                          android:scaleType="fitXY"
                          android:src="@drawable/button_press_bookmark"/>
@@ -97,6 +101,7 @@
             <ImageButton android:id="@+id/tentangkButton"
                          android:layout_width="400px"
                          android:layout_height="120px"
+                         android:onClick="tentangButton"
                          android:background="?android:selectableItemBackground"
                          android:scaleType="fitXY"
                          android:src="@drawable/button_press_tentang"/>

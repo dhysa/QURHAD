@@ -21,5 +21,35 @@ public class MainMenu extends Activity {
         startActivity(intent);
     }
 
+    public void hadistButton(View view)
+    {
+        Intent intent = new Intent(MainMenu.this, HadistRiwayat.class);
+        startActivity(intent);
+    }
+
+    public void cariButton(View view)
+    {
+        Intent intent = new Intent(MainMenu.this, Pencarian.class);
+        startActivity(intent);
+    }
+
+    public void catatanButton(View view)
+    {
+        Intent intent = new Intent(MainMenu.this, Catatan.class);
+        startActivity(intent);
+    }
+
+    public void bookmarkButton(View view)
+    {
+        Intent intent = new Intent(MainMenu.this, Bookmark.class);
+        startActivity(intent);
+    }
+
+    public void tentangButton(View view)
+    {
+        Intent intent = new Intent(MainMenu.this, TentangQurhad.class);
+        startActivity(intent);
+    }
+
 
 }
