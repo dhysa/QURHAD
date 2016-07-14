@@ -10,9 +10,26 @@
             android:id="@+id/headerLayout"
             android:layout_width="match_parent"
             android:layout_height="150px"
-            android:layout_alignParentTop="true"
             android:background="@color/brown"
+            android:layout_alignParentTop="true"
             android:gravity="center" >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8px"
+                android:layout_marginLeft="930px">
+
+        <ImageButton
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitXY"
+                android:background="?android:selectableItemBackground"
+                android:src="@drawable/button_press_setting"/>
+
+        </LinearLayout>
+
     </RelativeLayout>
 
     <!-- Footer Layout -->
