@@ -69,7 +69,7 @@
                        android:layout_height="300px"
                        android:layout_marginBottom="15px"
                        android:src="@drawable/qurhad_judul"/>
-8
+
             <ImageButton android:id="@+id/quranButton"
                          android:layout_width="400px"
                          android:layout_height="120px"
