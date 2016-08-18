@@ -6,10 +6,6 @@
               android:background="@color/broken_white"
         >
 
-    <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="catatan"
-            android:textColor="@color/brown"/>
+    <include layout="@layout/header_page"/>
 
 </LinearLayout>

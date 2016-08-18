@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:font="http://schemas.android.com/apk/res/com.android.qurhad"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+    <RelativeLayout android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:background="@color/brown">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="25px">
+
+            <ImageView
+                    android:id="@+id/headerLogo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/qurhad_splash">
+            </ImageView>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:orientation="vertical"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginBottom="10dp"
+                    >
+
+                <com.android.qurhad.TextViewPlus
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@color/broken_white"
+                        android:textSize="65dp"
+                        android:layout_marginRight="35px"
+                        android:gravity="center"
+                        font:customFont="fonts/QuinchoScript.ttf"/>
+
+                <com.android.qurhad.TextViewPlus
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:text="@string/qurhad_mean"
+                        android:textSize="15dp"
+                        android:textColor="@color/broken_white"
+                        android:gravity="center"
+                        font:customFont="fonts/CFJackStory.ttf"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

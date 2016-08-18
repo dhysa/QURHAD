@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:font="http://schemas.android.com/apk/res/com.android.qurhad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/broken_white">
+
+    <!-- Header Layout -->
+
+    <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/brown"
+            android:layout_alignParentTop="true"
+            android:gravity="center" >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp">
+
+            <com.android.qurhad.TextViewPlus
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    font:customFont="fonts/CFJackStory.ttf"
+                    android:gravity="center|left"
+                    android:text="@string/title_pengaturan"
+                    android:textSize="30dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- Footer Layout -->
+
+    <RelativeLayout
+            android:id="@+id/footerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/brown"
+            android:gravity="center" >
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+    </RelativeLayout>
+
+    <!-- Menu Layout -->
+
+    <RelativeLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/footerLayout"
+            android:layout_below="@id/headerLayout"
+            android:gravity="center" >
+
+
+    </RelativeLayout>
+</RelativeLayout>

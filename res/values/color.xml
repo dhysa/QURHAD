@@ -2,5 +2,7 @@
 <resources>
     <color name="white">#ffff</color>
     <color name="brown">#763F32</color>
+    <color name="light_brown">#d9afa6</color>
     <color name="broken_white">#ffffcc</color>
+    <color name="listBG">#ffd9b3</color>
 </resources>

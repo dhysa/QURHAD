@@ -4,12 +4,12 @@
               android:layout_height="match_parent"
               android:background="@color/broken_white">
 
-    <!-- Header Layout -->
+
 
     <RelativeLayout
             android:id="@+id/headerLayout"
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="50dp"
             android:background="@color/brown"
             android:layout_alignParentTop="true"
             android:gravity="center" >
@@ -17,27 +17,31 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="8px"
-                android:layout_marginLeft="930px">
+                android:layout_marginRight="10dp"
+                android:gravity="center|right">
+
+            <!-- Button Pengaturan-->
 
         <ImageButton
-                android:layout_width="130px"
-                android:layout_height="130px"
+                android:id="@+id/pengaturanButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:scaleType="fitXY"
                 android:background="?android:selectableItemBackground"
-                android:src="@drawable/button_press_setting"/>
+                android:src="@drawable/button_press_setting"
+                android:onClick="pengaturanButton"/>
 
         </LinearLayout>
 
-    </RelativeLayout>
+    </RelativeLayout> <!-- Header Layout -->
 
-    <!-- Footer Layout -->
+
 
     <RelativeLayout
             android:id="@+id/footerLayout"
             android:layout_width="match_parent"
-            android:layout_height="100px"
+            android:layout_height="25dp"
             android:layout_alignParentBottom="true"
             android:background="@color/brown"
             android:gravity="center" >
@@ -47,17 +51,18 @@
                 android:layout_height="wrap_content"
                 android:text="@string/version"
                 android:textColor="@color/white"
-                android:textSize="15sp" />
-    </RelativeLayout>
+                android:textSize="15dp" />
+    </RelativeLayout> <!-- Footer Layout -->
 
-    <!-- Menu Layout -->
 
-    <RelativeLayout
+
+    <ScrollView
             android:id="@+id/menuLayout"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_above="@id/footerLayout"
             android:layout_below="@id/headerLayout"
+            android:layout_marginTop="50dp"
             android:gravity="center" >
 
         <LinearLayout android:layout_width="match_parent"
@@ -65,14 +70,14 @@
                       android:orientation="vertical"
                       android:gravity="center"
                 >
-            <ImageView android:layout_width="800px"
-                       android:layout_height="300px"
-                       android:layout_marginBottom="15px"
+            <ImageView android:layout_width="200dp"
+                       android:layout_height="100dp"
+                       android:layout_marginBottom="5dp"
                        android:src="@drawable/qurhad_judul"/>
 
             <ImageButton android:id="@+id/quranButton"
-                         android:layout_width="400px"
-                         android:layout_height="120px"
+                         android:layout_width="140dp"
+                         android:layout_height="45dp"
                          android:scaleType="fitXY"
                          android:layout_marginBottom="15px"
                          android:onClick="quranButton"
@@ -80,8 +85,8 @@
                          android:src="@drawable/button_press_quran"/>
 
             <ImageButton android:id="@+id/hadistButton"
-                         android:layout_width="400px"
-                         android:layout_height="120px"
+                         android:layout_width="140dp"
+                         android:layout_height="45dp"
                          android:scaleType="fitXY"
                          android:layout_marginBottom="15px"
                          android:onClick="hadistButton"
@@ -89,8 +94,8 @@
                          android:src="@drawable/button_press_hadist"/>
 
             <ImageButton android:id="@+id/cariButton"
-                         android:layout_width="400px"
-                         android:layout_height="120px"
+                         android:layout_width="140dp"
+                         android:layout_height="45dp"
                          android:layout_marginBottom="15px"
                          android:onClick="cariButton"
                          android:background="?android:selectableItemBackground"
@@ -98,8 +103,8 @@
                          android:src="@drawable/button_press_cari"/>
 
             <ImageButton android:id="@+id/catatanButton"
-                         android:layout_width="400px"
-                         android:layout_height="120px"
+                         android:layout_width="140dp"
+                         android:layout_height="45dp"
                          android:layout_marginBottom="15px"
                          android:onClick="catatanButton"
                          android:background="?android:selectableItemBackground"
@@ -107,8 +112,8 @@
                          android:src="@drawable/button_press_catatan"/>
 
             <ImageButton android:id="@+id/bookmarkButton"
-                         android:layout_width="400px"
-                         android:layout_height="120px"
+                         android:layout_width="140dp"
+                         android:layout_height="45dp"
                          android:layout_marginBottom="15px"
                          android:onClick="bookmarkButton"
                          android:background="?android:selectableItemBackground"
@@ -116,13 +121,13 @@
                          android:src="@drawable/button_press_bookmark"/>
 
             <ImageButton android:id="@+id/tentangkButton"
-                         android:layout_width="400px"
-                         android:layout_height="120px"
+                         android:layout_width="140dp"
+                         android:layout_height="45dp"
                          android:onClick="tentangButton"
                          android:background="?android:selectableItemBackground"
                          android:scaleType="fitXY"
                          android:src="@drawable/button_press_tentang"/>
         </LinearLayout>
 
-    </RelativeLayout>
+    </ScrollView>  <!-- Menu Layout -->
 </RelativeLayout>

@@ -51,5 +51,12 @@ public class MainMenu extends Activity {
         startActivity(intent);
     }
 
+    public void pengaturanButton(View view)
+    {
+        Intent intent = new Intent(MainMenu.this, Pengaturan.class);
+        startActivity(intent);
+
+    }
+
 
 }
