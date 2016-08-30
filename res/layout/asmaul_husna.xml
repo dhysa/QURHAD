@@ -15,14 +15,13 @@
             android:paddingTop="10dp">
 
         <com.android.qurhad.TextViewPlus
-                android:id="@+id/nama_temaRiwayat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 font:customFont="fonts/CFJackStory.ttf"
                 android:textColor="@color/brown"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:text="@string/Nama_Tema"/>
+                android:text="@string/Asmaul_Husna"/>
 
         <RelativeLayout android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
@@ -33,14 +32,11 @@
 
 
             <ListView
-                    android:id="@+id/list_hadistRiwayat"
+                    android:id="@+id/list_asmaulHusna"
                     android:layout_width="fill_parent"
                     android:background="@color/listBG"
                     android:layout_height="500dp"
                     android:focusableInTouchMode="true"
-                    android:choiceMode="singleChoice"
-                    android:drawSelectorOnTop="true"
-                    android:listSelector="@drawable/list_selector"
                     android:divider="@color/broken_white"
                     android:dividerHeight="2dp">
 

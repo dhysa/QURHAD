@@ -46,6 +46,15 @@
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
+        <activity android:name=".hadistRiwayat.HadistRiwayat"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+        <activity android:name=".asmaulHusna.AsmaulHusna"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
+
+
 
 
     </application>

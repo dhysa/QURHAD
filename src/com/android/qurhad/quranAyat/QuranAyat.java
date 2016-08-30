@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.TextView;
 import com.android.qurhad.R;
+import com.android.qurhad.TextViewPlus;
 import com.android.qurhad.database.DatabaseHelper;
 
 import java.sql.SQLException;
@@ -28,14 +28,11 @@ public class QuranAyat extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quran_ayat);
-        int plus = 1;
+        TextViewPlus nama_suratAyat = (TextViewPlus) findViewById(R.id.nama_suratAyat);
 
         Intent fetchID = getIntent();
         int id = fetchID.getIntExtra("id", 0);
-
-//        fetchIDtext = (TextView) findViewById(R.id.fetchID);
-//        fetchIDtext.setText("ID" + String.valueOf(id));
-
+        int jumlah = (id+1);
         dbHelper = new DatabaseHelper(this);
 
 
@@ -52,6 +49,7 @@ public class QuranAyat extends Activity {
             if (cursor != null) {
                 if (cursor.moveToFirst()) {
                     do {
+                        nama_suratAyat.setText("Surat ke " + jumlah);
                         QuranAyat_Item item = new QuranAyat_Item();
                         item.setAya(cursor.getString(0));
                         item.setText_quran(cursor.getString(1));
@@ -68,7 +66,6 @@ public class QuranAyat extends Activity {
         listView = (ListView) findViewById(R.id.list_ayat);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-
 
     }
 

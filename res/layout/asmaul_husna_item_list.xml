@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="10dp"
+              android:paddingTop="10dp"
+              android:background="@color/listBG">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nomor_asmaulHusna"
+            android:text="1"
+            android:textColor="@color/brown"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="15dp"
+            android:paddingBottom="10dp"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="15dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingRight="15dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/nama_asmaulHusna"
+                    android:text="Nama Asmaul Husna"
+                    android:gravity="left"
+                    android:textColor="@color/brown"
+                    android:textSize="15sp"
+                    android:paddingBottom="10dp"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/arab_asmaulHusna"
+                    android:gravity="right"
+                    android:text="Arab Asmaul Husna"
+                    android:textColor="@color/brown"
+                    android:textSize="18sp"
+                    android:paddingBottom="10dp"/>
+        </LinearLayout>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/arti_asmaulHusna"
+                android:text="Nama Periwayat"
+                android:gravity="left"
+                android:textColor="@color/brown"
+                android:textSize="15sp"
+                android:paddingBottom="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

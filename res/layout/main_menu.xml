@@ -80,14 +80,23 @@
                          android:background="?android:selectableItemBackground"
                          android:src="@drawable/button_press_hadist"/>
 
-            <ImageButton android:id="@+id/cariButton"
+            <!--<ImageButton android:id="@+id/cariButton"-->
+                         <!--android:layout_width="140dp"-->
+                         <!--android:layout_height="45dp"-->
+                         <!--android:layout_marginBottom="15px"-->
+                         <!--android:onClick="cariButton"-->
+                         <!--android:background="?android:selectableItemBackground"-->
+                         <!--android:scaleType="fitXY"-->
+                         <!--android:src="@drawable/button_press_cari"/>-->
+
+            <ImageButton android:id="@+id/asmaulHusnaButton"
                          android:layout_width="140dp"
                          android:layout_height="45dp"
                          android:layout_marginBottom="15px"
-                         android:onClick="cariButton"
+                         android:onClick="asmaulHusnaButton"
                          android:background="?android:selectableItemBackground"
                          android:scaleType="fitXY"
-                         android:src="@drawable/button_press_cari"/>
+                         android:src="@drawable/button_press_asmauhusna"/>
 
             <ImageButton android:id="@+id/catatanButton"
                          android:layout_width="140dp"

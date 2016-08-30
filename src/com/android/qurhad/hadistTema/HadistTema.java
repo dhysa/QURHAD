@@ -1,11 +1,16 @@
 package com.android.qurhad.hadistTema;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewDebug;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import com.android.qurhad.database.DatabaseHelper;
 import com.android.qurhad.R;
+import com.android.qurhad.hadistRiwayat.HadistRiwayat;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -15,7 +20,7 @@ import java.util.ArrayList;
  */
 public class HadistTema extends Activity {
     private DatabaseHelper dbHelper;
-    private ListView listView;
+    private ListView listTema;
     private HadistTema_Adapter adapter;
     ArrayList<HadistTema_Item> arrayList = new ArrayList<HadistTema_Item>();
 
@@ -50,9 +55,19 @@ public class HadistTema extends Activity {
         }
 
         adapter = new HadistTema_Adapter(this, R.layout.hadist_tema_item_list, arrayList);
-        listView = (ListView) findViewById(R.id.list_hadistTema);
-        listView.setAdapter(adapter);
+        listTema = (ListView) findViewById(R.id.list_hadistTema);
+        listTema.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+
+        listTema.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent halaman_hadistRiwayat = new Intent(getApplicationContext(), HadistRiwayat.class);
+                halaman_hadistRiwayat.putExtra("id", (int)id);
+                startActivity(halaman_hadistRiwayat);
+            }
+        });
     }
 
 }
