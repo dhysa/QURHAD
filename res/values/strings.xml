@@ -6,13 +6,23 @@
     <string name="title_pengaturan">"Pengaturan"</string>
     <string name="title_tentangQurhad">"Tentang QurHad</string>
     <string name="feedback">"Feedback"</string>
+    <string name="Daftar_Surat">"Daftar Surat Al-Qur'an"</string>
+    <string name="Daftar_Hadist">"Daftar Tema Hadist"</string>
+    <string name="Nama_Surat">"Nama Surat"</string>
+    <string name="Bismillah">"بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ"</string>
 
-    <string name="about">"QurHad merupakan aplikasi yang menggabungkan Al-Qur'an dan Hadits&#46; Seperti diketahui Al&#45;Quran dan Hadits meruapakan pedoman utama bagi umat Muslim&#44; maka dari itu akan lebih memudahkan umat Muslim jika kedua pedoman utama ini digabungkan dalam satu aplikasi&#46;\n
-        Sumber ayat dan terjemahan Al&#45;Quran pada aplikasi ini didapat dari source yang terpercaya yaitu Tanzil Project&#46; Sedangkan Hadits yang diterapkan disini adalah Riyadush Shalihin yang dikumpulkan oleh Imam Nawawi Insya Allah aplikasi ini memperoleh dari sumber yang terpercaya&#46; Aplikasi ini dilengkapi beberapa fitur yang diutamakan adalah \n
+    <string name="about">"QurHad merupakan aplikasi yang menggabungkan Al-Qur'an dan Hadits&#46; Seperti diketahui Al&#45;Quran
+        dan Hadits meruapakan pedoman utama bagi umat Muslim&#44; maka dari itu akan lebih memudahkan umat Muslim jika
+        kedua pedoman utama ini digabungkan dalam satu aplikasi&#46;\n
+        Sumber ayat dan terjemahan Al&#45;Quran pada aplikasi ini didapat dari source yang terpercaya yaitu Tanzil
+        Project&#46; Sedangkan Hadits yang diterapkan disini adalah Riyadush Shalihin yang dikumpulkan oleh Imam Nawawi
+        Insya Allah aplikasi ini memperoleh dari sumber yang terpercaya&#46; Aplikasi ini dilengkapi beberapa fitur yang
+        diutamakan adalah \n
         \u2022 fitur pencarian&#44;
         \u2022 fitur notifikasi&#44;
         \u2022 fitur pengingat&#44;
         \u2022 dan fitur terakhir membaca&#46;
 
-        Jika ada kritik maupun saran&#44; Anda bisa menghubungi developer melalui button dibawah ini&#58;"</string>
+        Jika ada kritik maupun saran&#44; Anda bisa menghubungi developer melalui button dibawah ini&#58;"
+    </string>
 </resources>

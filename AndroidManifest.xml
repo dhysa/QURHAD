@@ -6,7 +6,7 @@
     <uses-sdk android:minSdkVersion="15"/>
     <application android:label="@string/app_name" android:icon="@drawable/qurhad_logo">
 
-        <activity android:name="com.android.qurhad.Splash"
+        <activity android:name=".main.Splash"
                   android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -14,15 +14,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.qurhad.MainMenu"
+        <activity android:name=".main.MainMenu"
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
-        <activity android:name="com.android.qurhad.QuranSurat"
+        <activity android:name=".quranSurat.QuranSurat"
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
-        <activity android:name="com.android.qurhad.HadistRiwayat"
+        <activity android:name=".hadistTema.HadistTema"
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
@@ -38,11 +38,11 @@
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
-        <activity android:name="com.android.qurhad.TentangQurhad"
+        <activity android:name=".main.TentangQurhad"
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
-        <activity android:name="com.android.qurhad.Pengaturan"
+        <activity android:name=".quranAyat.QuranAyat"
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 

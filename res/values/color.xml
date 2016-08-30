@@ -5,4 +5,5 @@
     <color name="light_brown">#d9afa6</color>
     <color name="broken_white">#ffffcc</color>
     <color name="listBG">#ffd9b3</color>
+    <color name="listSelector">#96ff9933</color>
 </resources>
