@@ -36,9 +36,10 @@
                     android:layout_width="fill_parent"
                     android:background="@color/listBG"
                     android:layout_height="wrap_content"
-                    android:drawSelectorOnTop="true"
                     android:focusableInTouchMode="true"
-                    android:listSelector="@color/listSelector"
+                    android:choiceMode="singleChoice"
+                    android:drawSelectorOnTop="true"
+                    android:listSelector="@drawable/list_selector"
                     android:divider="@color/broken_white"
                     android:dividerHeight="2dp">
 

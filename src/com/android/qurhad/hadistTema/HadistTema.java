@@ -22,7 +22,7 @@ public class HadistTema extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hadist_riwayat);
+        setContentView(R.layout.hadist_tema);
 
         dbHelper = new DatabaseHelper(this);
 
@@ -49,8 +49,8 @@ public class HadistTema extends Activity {
 
         }
 
-        adapter = new HadistTema_Adapter(this, R.layout.hadist_riwayat_item_list, arrayList);
-        listView = (ListView) findViewById(R.id.list_hadist);
+        adapter = new HadistTema_Adapter(this, R.layout.hadist_tema_item_list, arrayList);
+        listView = (ListView) findViewById(R.id.list_hadistTema);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
     }
