@@ -1,0 +1,32 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:font="http://schemas.android.com/apk/res/com.android.qurhad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/broken_white"
+        android:padding="10dp">
+
+    <com.android.qurhad.TextViewPlus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            font:customFont="fonts/CFJackStory.ttf"
+            android:textColor="@color/brown"
+            android:text="Masukan Notes"
+            android:id="@+id/textView" />
+
+    <EditText
+            android:id="@+id/judul_notes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Judul Notes"
+            android:padding="10dp" />
+    <EditText
+            android:id="@+id/isi_notes"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:gravity="top"
+            android:hint="Isi Notes"
+            android:padding="10dp" />
+</LinearLayout>

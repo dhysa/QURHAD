@@ -30,8 +30,8 @@ public class HadistRiwayat extends Activity {
 
         Intent fetchID = getIntent();
         int id = fetchID.getIntExtra("id", 0);
-        int jumlah = (id+1);
 
+        int jumlah = (id+1);
 
         dbHelper = new DatabaseHelper(this);
 
@@ -42,13 +42,13 @@ public class HadistRiwayat extends Activity {
 
         }
 
-
         try {
-            Cursor cursor = dbHelper.QueryData("select hadist_nomor, isi_hadist,nama_periwayat from hadist where  id_hadist_tema=" + jumlah);
-            if (cursor != null) {
-                if (cursor.moveToFirst()) {
+            Cursor cursorNamaHadist = dbHelper.QueryData("select tema from tema_hadist where id_tema = " + jumlah);
+            Cursor cursor = dbHelper.QueryData("select hadist_nomor, isi_hadist, nama_periwayat from hadist where  id_hadist_tema=" + jumlah);
+            if (cursor != null && cursorNamaHadist != null) {
+                if (cursor.moveToFirst() & cursorNamaHadist.moveToFirst()) {
                     do {
-                        nama_temaRiwayat.setText("Tema ke "+ (jumlah) );
+                        nama_temaRiwayat.setText(cursorNamaHadist.getString(cursorNamaHadist.getColumnIndex("tema")));
                         HadistRiwayat_Item item = new HadistRiwayat_Item();
                         item.setHadist_nomor(cursor.getString(0));
                         item.setIsi_hadist(cursor.getString(1));

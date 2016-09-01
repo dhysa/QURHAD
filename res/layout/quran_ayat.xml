@@ -24,18 +24,13 @@
                 android:gravity="center"
                 android:text="@string/Nama_Surat"/>
 
-        <RelativeLayout android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp">
-            <!--<TextView-->
-                    <!--android:id="@+id/fetchID"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="tes"-->
-                    <!--android:textSize="50sp"/>-->
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
             <ListView
                     android:id="@+id/list_ayat"
@@ -43,7 +38,12 @@
                     android:layout_height="wrap_content"
                     android:background="@color/listBG"
                     android:divider="@color/broken_white"
-                    android:dividerHeight="2dp">
+                    android:dividerHeight="2dp"
+                    android:focusableInTouchMode="true"
+                    android:choiceMode="singleChoice"
+                    android:drawSelectorOnTop="true"
+                    android:listSelector="@drawable/list_selector">
+
 
             </ListView>
 

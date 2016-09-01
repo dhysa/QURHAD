@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.view.View;
 import com.android.qurhad.*;
 import com.android.qurhad.asmaulHusna.AsmaulHusna;
+import com.android.qurhad.bookmark.Bookmark;
+import com.android.qurhad.catatan.Catatan;
 import com.android.qurhad.hadistTema.HadistTema;
 import com.android.qurhad.quranSurat.QuranSurat;
 
@@ -52,6 +54,12 @@ public class MainMenu extends Activity {
     public void asmaulHusnaButton(View view)
     {
         Intent halaman_asmaulHusna = new Intent(MainMenu.this, AsmaulHusna.class);
+        startActivity(halaman_asmaulHusna);
+    }
+
+    public void pencarianButton(View view)
+    {
+        Intent halaman_asmaulHusna = new Intent(MainMenu.this, Pencarian.class);
         startActivity(halaman_asmaulHusna);
     }
 

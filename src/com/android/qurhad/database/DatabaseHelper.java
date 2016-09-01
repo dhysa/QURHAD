@@ -77,9 +77,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         qurhadDatabase = SQLiteDatabase.openDatabase(thePath,null, SQLiteDatabase.OPEN_READWRITE);
     }
 
-//    public  void  ExeSQLData(String sql) throws SQLException{
-//        qurhadDatabase.execSQL(sql);
-//    }
+    public Cursor ExeSQLData(String sql) throws SQLException{
+        qurhadDatabase.execSQL(sql);
+        return null;
+    }
 
     public Cursor QueryData(String query) throws SQLException{
         return qurhadDatabase.rawQuery(query,null);

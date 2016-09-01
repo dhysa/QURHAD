@@ -39,6 +39,7 @@ public class HadistTema extends Activity {
         }
 
         try {
+
             Cursor cursor = dbHelper.QueryData("select * from tema_hadist");
             if (cursor != null) {
                 if (cursor.moveToFirst()) {
@@ -64,7 +65,7 @@ public class HadistTema extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 Intent halaman_hadistRiwayat = new Intent(getApplicationContext(), HadistRiwayat.class);
-                halaman_hadistRiwayat.putExtra("id", (int)id);
+                halaman_hadistRiwayat.putExtra("id", (int) id);
                 startActivity(halaman_hadistRiwayat);
             }
         });

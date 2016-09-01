@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="10dp"
+              android:paddingTop="10dp"
+              android:background="@color/listBG">
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/judul_notesList"
+                android:text="Judul Notes"
+                android:textColor="@color/brown"
+                android:gravity="left"
+                android:textSize="15sp"
+                android:paddingBottom="10dp"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/isi_notesList"
+                android:text="Isi Notes"
+                android:textColor="@color/brown"
+                android:gravity="left"
+                android:textSize="15sp"
+                android:paddingBottom="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

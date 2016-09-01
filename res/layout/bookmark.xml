@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:font="http://schemas.android.com/apk/res/com.android.qurhad"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@color/broken_white"
-        >
+              android:background="@color/broken_white">
+
     <include layout="@layout/header_page"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+        <com.android.qurhad.TextViewPlus
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                font:customFont="fonts/CFJackStory.ttf"
+                android:textColor="@color/brown"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:text="@string/Bookmark"/>
+
+        <RelativeLayout android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+
+            <ListView
+                    android:id="@+id/list_Bookmark"
+                    android:layout_width="wrap_content"
+                    android:background="@color/listBG"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:divider="@color/broken_white"
+                    android:dividerHeight="2dp">
+
+            </ListView>
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

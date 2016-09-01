@@ -19,7 +19,17 @@
                 android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:gravity="center|right">
+
+            <ImageButton android:id="@+id/pencarianButton"
+                         android:layout_width="30dp"
+                         android:layout_height="30dp"
+                         android:scaleType="fitXY"
+                         android:layout_marginBottom="15px"
+                         android:onClick="pencarianButton"
+                         android:background="?android:selectableItemBackground"
+                         android:src="@drawable/search"/>
         </LinearLayout>
+
 
     </RelativeLayout> <!-- Header Layout -->
 

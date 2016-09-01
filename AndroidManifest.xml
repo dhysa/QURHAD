@@ -26,15 +26,11 @@
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
-        <activity android:name="com.android.qurhad.Pencarian"
+        <activity android:name=".catatan.Catatan"
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
-        <activity android:name="com.android.qurhad.Catatan"
-                  android:theme="@android:style/Theme.NoTitleBar">
-        </activity>
-
-        <activity android:name="com.android.qurhad.Bookmark"
+        <activity android:name=".bookmark.Bookmark"
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
@@ -54,8 +50,9 @@
                   android:theme="@android:style/Theme.NoTitleBar">
         </activity>
 
-
-
+        <activity android:name=".Pencarian"
+                  android:theme="@android:style/Theme.NoTitleBar">
+        </activity>
 
     </application>
 </manifest>
