@@ -15,13 +15,16 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="25px">
 
-            <ImageView
+            <ImageButton
                     android:id="@+id/headerLogo"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:background="?android:selectableItemBackground"
+                    android:onClick="mainMenuButton"
                     android:src="@drawable/qurhad_splash">
-            </ImageView>
+            </ImageButton>
 
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="match_parent"

@@ -9,6 +9,15 @@ public class QuranAyat_Item {
     private String text_quran;
     private String text_indo;
     private String nama; //kolom nama pada tabel nama_surat
+    private String id_quran;
+
+    public String getId_quran() {
+        return id_quran;
+    }
+
+    public void setId_quran(String id_quran) {
+        this.id_quran = id_quran;
+    }
 
     public String getId_surat() {
         return id_surat;
@@ -17,6 +26,7 @@ public class QuranAyat_Item {
     public void setId_surat(String id_surat) {
         this.id_surat = id_surat;
     }
+
 
     public String getAya() {
         return aya;

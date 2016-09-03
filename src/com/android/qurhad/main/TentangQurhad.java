@@ -1,6 +1,6 @@
 package com.android.qurhad.main;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import com.android.qurhad.R;
 /**
  * Created by Ayyu Andhysa on 7/12/2016.
  */
-public class TentangQurhad extends Activity{
+public class TentangQurhad extends MainMenu{
 
     // Load Layout Tentang QurHad
     @Override

@@ -1,11 +1,11 @@
 package com.android.qurhad.asmaulHusna;
 
-import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ListView;
 import com.android.qurhad.R;
 import com.android.qurhad.database.DatabaseHelper;
+import com.android.qurhad.main.MainMenu;
 
 
 import java.sql.SQLException;
@@ -14,7 +14,9 @@ import java.util.ArrayList;
 /**
  * Created by Ayyu Andhysa on 8/30/2016.
  */
-public class AsmaulHusna extends Activity {
+
+
+public class AsmaulHusna extends MainMenu {
     private DatabaseHelper dbHelper;
     private ListView listAsmaulHusna;
     private AsmaulHusna_Adapter adapter;

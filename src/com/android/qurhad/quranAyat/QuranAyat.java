@@ -8,21 +8,21 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
 import com.android.qurhad.R;
 import com.android.qurhad.TextViewPlus;
 import com.android.qurhad.database.DatabaseHelper;
+import com.android.qurhad.quranSurat.QuranSurat;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Ayyu Andhysa on 8/27/2016.
  */
-public class QuranAyat extends Activity {
+public class QuranAyat extends QuranSurat {
     private DatabaseHelper dbHelper;
     private ListView listView;
     private QuranAyat_Adapter adapter;
@@ -39,7 +39,7 @@ public class QuranAyat extends Activity {
 
         final Intent fetchID = getIntent();
         int id = fetchID.getIntExtra("id", 0);
-        int jumlah = (id + 1);
+        final int jumlah = (id + 1);
         dbHelper = new DatabaseHelper(this);
 
         //openDatabase
@@ -53,7 +53,7 @@ public class QuranAyat extends Activity {
         // ambil data dengan query dan memasukan data ke item list
         try {
             Cursor cursorNamaSurat = dbHelper.QueryData("select nama from  nama_surat where id_nama_surat =" + jumlah);
-            Cursor cursor = dbHelper.QueryData("select aya,text_quran, text_indo from  quran_terjemahan where id_surat =" + jumlah);
+            Cursor cursor = dbHelper.QueryData("select aya,text_quran, text_indo, id_quran from quran_terjemahan where id_surat =" + jumlah);
             if (cursor != null && cursorNamaSurat != null) {
                 if (cursor.moveToFirst() && cursorNamaSurat.moveToFirst()) {
                     do {
@@ -62,6 +62,7 @@ public class QuranAyat extends Activity {
                         item.setAya(cursor.getString(0));
                         item.setText_quran(cursor.getString(1));
                         item.setText_indo(cursor.getString(2));
+                        item.setId_quran(cursor.getString(3));
                         arrayList.add(item);
                     } while (cursor.moveToNext());
                 }
@@ -76,9 +77,10 @@ public class QuranAyat extends Activity {
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
 
                 final CharSequence menu[] = new CharSequence[]{"Bookmark", "Notes"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(QuranAyat.this);
@@ -89,10 +91,12 @@ public class QuranAyat extends Activity {
                                 // the user clicked on menu[which]
                                 switch (which) {
                                     case 0:
+                                       // Toast.makeText(getApplicationContext(), arrayList.get(arrayList.lastIndexOf(4)).toString(),   Toast.LENGTH_LONG).show();
                                         try {
+
                                             dbHelper.openDatabase();
-                                            dbHelper.ExeSQLData("UPDATE quran_terjemahan SET bookmarks= 1 WHERE id_quran=" + 5);
-                                            Toast toast = Toast.makeText(QuranAyat.this, "Bookmark telah ditambahka", Toast.LENGTH_SHORT);
+                                            dbHelper.ExeSQLData("UPDATE quran_terjemahan SET bookmarks = 1 WHERE id_quran = " + 1);
+                                            Toast toast = Toast.makeText(QuranAyat.this, "Bookmark telah ditambahkan", Toast.LENGTH_SHORT);
                                             toast.show();
 
                                         } catch (SQLException e) {

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:font="http://schemas.android.com/apk/res/com.android.qurhad"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
@@ -20,23 +19,89 @@
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:hint="cari"
-                android:padding="10dp" />
+                android:padding="10dp"/>
 
         <ImageButton android:id="@+id/cariButton"
                      android:layout_width="30dp"
                      android:layout_height="30dp"
-                     android:scaleType="fitXY"
-                     android:layout_marginBottom="15px"
+                     android:layout_gravity="center"
+                     android:scaleType="fitCenter"
                      android:background="?android:selectableItemBackground"
                      android:src="@drawable/search"/>
 
-
     </LinearLayout>
-    <TextView
-            android:id="@+id/pencarianText"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="pencarian"
-            android:textColor="@color/brown"/>
 
+
+    <TabHost android:id="@android:id/tabhost"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/brown"/>
+
+            <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <LinearLayout
+                        android:id="@+id/AlQuran"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                    <ScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
+
+                        <LinearLayout android:layout_width="fill_parent"
+                                      android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/pencarianText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/brown"/>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/Hadist"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fffdfdcb"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="vertical">
+
+                    <ScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
+
+                        <LinearLayout android:layout_width="fill_parent"
+                                      android:layout_height="wrap_content">
+                            <TextView
+                                    android:id="@+id/pencarianHadis"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/brown"/>
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 </LinearLayout>

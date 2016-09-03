@@ -63,4 +63,10 @@ public class MainMenu extends Activity {
         startActivity(halaman_asmaulHusna);
     }
 
+    public void mainMenuButton(View view)
+    {
+        Intent halaman_quranSurat = new Intent(getApplicationContext(),MainMenu.class);
+        startActivity(halaman_quranSurat);
+    }
+
 }

@@ -1,6 +1,6 @@
 package com.android.qurhad.hadistRiwayat;
 
-import android.app.Activity;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.ListView;
 import com.android.qurhad.R;
 import com.android.qurhad.TextViewPlus;
 import com.android.qurhad.database.DatabaseHelper;
+import com.android.qurhad.hadistTema.HadistTema;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 /**
  * Created by Ayyu Andhysa on 8/30/2016.
  */
-public class HadistRiwayat extends Activity {
+public class HadistRiwayat extends HadistTema {
     private DatabaseHelper dbHelper;
     private ListView listHadist;
     private HadistRiwayat_Adapter adapter;

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 import com.android.qurhad.R;
 import com.android.qurhad.database.DatabaseHelper;
+import com.android.qurhad.main.MainMenu;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 /**
  * Created by Ayyu Andhysa on 6/28/2016.
  */
-public class Bookmark extends Activity {
+public class Bookmark extends MainMenu {
     private ListView listView;
     private DatabaseHelper dbHelper;
     private Bookmark_Adapter adapter;

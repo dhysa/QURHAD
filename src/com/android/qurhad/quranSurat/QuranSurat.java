@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import com.android.qurhad.database.DatabaseHelper;
 import com.android.qurhad.R;
+import com.android.qurhad.main.MainMenu;
 import com.android.qurhad.quranAyat.QuranAyat;
 
 import java.sql.SQLException;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 /**
  * Created by Ayyu Andhysa on 6/28/2016.
  */
-public class QuranSurat extends Activity {
+public class QuranSurat extends MainMenu {
 
     private DatabaseHelper dbHelper;
     private ListView listQuran;

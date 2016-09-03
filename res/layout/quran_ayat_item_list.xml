@@ -34,6 +34,12 @@
             android:paddingBottom="10dp"/>
 
         <TextView
+                android:id="@+id/id_quran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+
+        <TextView
                 android:id="@+id/text_indo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

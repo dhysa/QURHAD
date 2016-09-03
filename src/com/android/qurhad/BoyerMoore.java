@@ -11,7 +11,7 @@ package com.android.qurhad;
 public class BoyerMoore
 
 {
-    /** Function to calculate index of pattern substring **/
+    /** Fungsi ini menghituung index dari substring  **/
 
     public static int indexOf(char[] text, char[] pattern)
 
@@ -67,7 +67,7 @@ public class BoyerMoore
 
     }
 
-    /** Makes the jump table based on the scan offset which mismatch occurs. **/
+    /** Melakukan lompatan pada indec berdasarkan ketidakcocokan yang terjadi **/
 
     private static int[] makeOffsetTable(char[] pattern)
 
@@ -103,7 +103,7 @@ public class BoyerMoore
 
     }
 
-    /** function to check if needle[p:end] a prefix of pattern **/
+    /** fungsi ini memeriksa kalau needle[p:end] adalah prefix dari pattern **/
 
     private static boolean isPrefix(char[] pattern, int p)
 
@@ -119,7 +119,7 @@ public class BoyerMoore
 
     }
 
-    /** function to returns the maximum length of the substring ends at p and is a suffix **/
+    /** Fungsi ini memngembalikan panjang maximum substring p dan suffux nya  **/
 
     private static int suffixLength(char[] pattern, int p)
 

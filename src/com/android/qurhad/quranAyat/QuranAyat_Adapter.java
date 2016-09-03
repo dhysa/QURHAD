@@ -33,10 +33,12 @@ public class QuranAyat_Adapter extends ArrayAdapter<QuranAyat_Item> {
             convertView = inflater.inflate(id, null);
         }
         QuranAyat_Item item = items.get(position);
+        TextView id_quran = (TextView) convertView.findViewById(R.id.id_quran);
         TextView nomor_ayat = (TextView) convertView.findViewById(R.id.nomor_ayat);
         TextView text_arab = (TextView) convertView.findViewById(R.id.text_arab);
         TextView tex_indo = (TextView) convertView.findViewById(R.id.text_indo);
 
+        id_quran.setText(item.getId_quran());
         nomor_ayat.setText(item.getAya());
         text_arab.setText(item.getText_quran());
         tex_indo.setText(item.getText_indo());
