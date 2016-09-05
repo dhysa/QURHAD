@@ -80,7 +80,7 @@ public class QuranAyat extends QuranSurat {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
+            public void onItemClick(final AdapterView<?> parent, final View view, final int position, long id) {
 
                 final CharSequence menu[] = new CharSequence[]{"Bookmark", "Notes"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(QuranAyat.this);
@@ -91,11 +91,11 @@ public class QuranAyat extends QuranSurat {
                                 // the user clicked on menu[which]
                                 switch (which) {
                                     case 0:
-                                       // Toast.makeText(getApplicationContext(), arrayList.get(arrayList.lastIndexOf(4)).toString(),   Toast.LENGTH_LONG).show();
+//                                        Toast.makeText(getApplicationContext(), adapter.getItem(position).getId_quran() , Toast.LENGTH_LONG).show();
                                         try {
 
                                             dbHelper.openDatabase();
-                                            dbHelper.ExeSQLData("UPDATE quran_terjemahan SET bookmarks = 1 WHERE id_quran = " + 1);
+                                            dbHelper.ExeSQLData("UPDATE quran_terjemahan SET bookmarks = 1 WHERE id_quran = " + adapter.getItem(position).getId_quran());
                                             Toast toast = Toast.makeText(QuranAyat.this, "Bookmark telah ditambahkan", Toast.LENGTH_SHORT);
                                             toast.show();
 

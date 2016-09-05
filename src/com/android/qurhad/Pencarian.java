@@ -1,15 +1,15 @@
 package com.android.qurhad;
 
-import android.content.Context;
-import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.*;
 import com.android.qurhad.database.DatabaseHelper;
 import com.android.qurhad.main.MainMenu;
@@ -97,9 +97,23 @@ public class Pencarian extends MainMenu {
             }
         });
 
-        //Show keyboard
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.showSoftInput(cari, InputMethodManager.SHOW_FORCED);
+//        cari.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (!hasFocus) {
+//                    // code to execute when EditText loses focus
+//                    //Hide keyboard
+//                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//                    imm.hideSoftInputFromWindow(cari.getWindowToken(), 0);
+//                }else {
+//                    //Show keyboard
+//                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//                    imm.showSoftInput(cari, InputMethodManager.SHOW_FORCED);
+//                }
+//            }
+//        });
+
+
 
         tombolCari.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,9 +138,9 @@ public class Pencarian extends MainMenu {
                         Toast.makeText(Pencarian.this, "Kolom Belum Terisi", Toast.LENGTH_SHORT).show();
                     } else {
 
-                        //Hide keyboard
-                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                        imm.hideSoftInputFromWindow(cari.getWindowToken(), 0);
+//                        //Hide keyboard
+//                        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+//                        imm.hideSoftInputFromWindow(cari.getWindowToken(), 0);
 
                         if (!cursorQuran.isAfterLast()) {
                             do {
@@ -143,12 +157,11 @@ public class Pencarian extends MainMenu {
 
                                 if (pos >= 0) {
 
-                                    //pencarian.append("index ke " + pos + "\n" + " surat " + surat + " , dan ayat ke " + ayat + "\n");
-                                    pencarian.append("Surat " + surat + "\n" +
-                                            "ayat ke " + ayat + ", artinya: " + terjemahan + "\n" + "\n");
-//                                    pencarianH.append("Tema Hadist: " + tema + "\n" +
-//                                            "H.R Berbunyi: " + isi_hadist + "Diriwayatkan oleh: "+ periwayat+ "\n" + "\n" );
-
+                                    SpannableStringBuilder spanTerjemahan = new SpannableStringBuilder(terjemahan);
+                                    spanTerjemahan.setSpan(new ForegroundColorSpan(Color.BLUE), pos, pos + p.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                                    pencarian.append("Surat " + surat + "\n" + "ayat ke " + ayat + ", artinya: ");
+                                    pencarian.append(spanTerjemahan);
+                                    pencarian.append("\n" + "\n");
 
                                 }
 
@@ -170,9 +183,12 @@ public class Pencarian extends MainMenu {
 
                                 if (posHadist >= 0) {
 
-                                    //pencarian.append("index ke " + pos + "\n" + " surat " + surat + " , dan ayat ke " + ayat + "\n");
-                                    pencarianH.append("Tema Hadist: " + tema + "\n" +
-                                            "H.R Berbunyi: " + isi_hadist + "Diriwayatkan oleh: " + periwayat + "\n" + "\n");
+                                    SpannableStringBuilder spanHadist = new SpannableStringBuilder(isi_hadist);
+                                    spanHadist.setSpan(new ForegroundColorSpan(Color.BLUE), posHadist, posHadist + p.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                                    pencarianH.append("Tema Hadist: " + tema + "\n");
+                                    pencarianH.append("H.R Berbunyi: ");
+                                    pencarianH.append(spanHadist);
+                                    pencarianH.append("Diriwayatkan oleh: " + periwayat + "\n" + "\n");
 
                                 }
 
@@ -180,10 +196,10 @@ public class Pencarian extends MainMenu {
 
                         }
 
-                        if(pencarian.getText().length() == 0){
+                        if (pencarian.getText().length() == 0) {
                             pencarian.setText("Kata tidak ditemukan");
                         }
-                        if(pencarianH.getText().length() == 0){
+                        if (pencarianH.getText().length() == 0) {
                             pencarianH.setText("Kata tidak ditemukan");
                         }
                     }
